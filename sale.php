@@ -1,44 +1,12 @@
 <?php
-// include_once "connection.php";
+include_once "connection.php";
 
-// $query = "select * from properties where delivery_type = 'Sale'";
-// $result = mysqli_query($con, $query);
+$query = "select * from properties where delivery_type = 'Sale'";
+$result = mysqli_query($con, $query);
 
-// if(!$result){
-// 	echo "Error Found!!!";
-// }
-
-
-
-$host = '127.0.0.1'; // Host: 127.0.0.1
-$username = 'your_mysql_username'; // Your MySQL username
-$password = 'your_mysql_password'; // Your MySQL password
-$database = 'realestate'; // Database name: realestate
-
-// Create a connection
-$connection = mysqli_connect($host, $username, $password, $database);
-
-// Check if the connection was successful
-if (!$connection) {
-    die('Error: Unable to connect to MySQL. ' . mysqli_connect_error());
+if(!$result){
+	echo "Error Found!!!";
 }
-
-$query = "SELECT * FROM properties WHERE delivery_type = 'Sale'";
-$result = mysqli_query($connection, $query);
-
-if (!$result) {
-    die('Error: Unable to fetch data. ' . mysqli_error($connection));
-}
-
-// Perform further operations with the result set
-
-// Close the connection when you're done
-mysqli_close($connection);
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>

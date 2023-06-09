@@ -1,32 +1,11 @@
 <?php
-// include_once "connection.php";
+include_once "connection.php";
 
-// $query = "select * from properties";
-// $result = mysqli_query($con, $query);
+$query = "select * from properties";
+$result = mysqli_query($con, $query);
 
-// if(!$result){
-// 	echo "Error Found!!!";
-// }
-
-$host = 'localhost';
-$user = 'root';
-$password = '';
-$database = 'realestate';
-
-try {
-    $connection = new mysqli($host, $user, $password, $database);
-    
-    // Check if the connection was successful
-    if ($connection->connect_error) {
-        throw new Exception('Failed to connect to MySQL: ' . $connection->connect_error);
-    }
-    
-    // Connection successful, perform your database operations here
-    
-    // Close the connection when you're done
-    $connection->close();
-} catch (Exception $e) {
-    echo 'Error: ' . $e->getMessage();
+if(!$result){
+	echo "Error Found!!!";
 }
 ?>
 
